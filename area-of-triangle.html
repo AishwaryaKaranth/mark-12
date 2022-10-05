@@ -2,6 +2,10 @@
 <html>
   <head>
     <title>Area Of Triangle</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <meta charset="UTF-8" />
   </head>
 
@@ -9,32 +13,27 @@
     <div id="app">
       <nav>
         <ul>
-          <li>Is Triangle?</li>
-          <li>Quiz</li>
-          <li><a href="area-of-triangle.html">Area Of Triangle</a></li>
-          <li>Area of Triangle</li>
+          <li><a href="is-triangle.html">Is Triangle?</a></li>
+          <li><a href="quiz.html">Quiz</a></li>
+          <li><a href="hypotenuse.html">Hypotenuse</a></li>
+          <li><a href="area-of-triangle.html">Area of Triangle</a></li>
         </ul>
       </nav>
+      <div class="main-container">
+        <div class="container">
+          <label>Enter Base:</label>
+          <input type="number" placeholder="enter first side" class="base" />
+          <label>Enter Height:</label>
+          <input type="number" placeholder="enter height" class="height" />
 
-      <div class="container">
-        <label>Enter First Side:</label>
-        <input
-          type="number"
-          placeholder="enter first side"
-          class="first-side"
-        />
-        <label>Enter Second Side:</label>
-        <input
-          type="number"
-          placeholder="enter second side"
-          class="second-side"
-        />
-        <button id="calculate-hypotenuse-btn">
-          Calculate Hypotenuse
-        </button>
-        <h2 class="third-side"></h2>
+          <button id="calculate-area-btn">
+            Calculate area of triangle
+          </button>
+          <p>Area of the triangle is calculated using 1/2 * (Base * Height)</p>
+          <h2 class="area"></h2>
+        </div>
       </div>
     </div>
-    <script src="src/hypotenuse.js"></script>
+    <script src="src/area-of-triangle.js"></script>
   </body>
 </html>

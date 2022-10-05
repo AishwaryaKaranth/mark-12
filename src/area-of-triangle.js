@@ -1,17 +1,18 @@
 import "./styles.css";
 
-var firstSide = document.querySelector(".first-side");
-var secondSide = document.querySelector(".second-side");
-var result = document.querySelector(".third-side");
-var calculate = document.querySelector("#calculate-hypotenuse-btn");
-console.log(result);
+var base = document.querySelector(".base");
+var height = document.querySelector(".height");
+var calculate = document.querySelector("#calculate-area-btn");
+var areaOfTriangle = document.querySelector(".area");
 
-const calculateHypotenuse = () => {
-  let hypotenuse = Math.sqrt(
-    Math.pow(Number(firstSide.value), 2) + Math.pow(Number(secondSide.value), 2)
-  );
-
-  result.innerText = `Hypotenuse is ${hypotenuse}`;
+const calculateArea = () => {
+  if (base.value <= 0 || height.value <= 0) {
+    areaOfTriangle.innerText =
+      "Base and Height of the triangle cannot be less than or equal to 0!";
+  } else {
+    let area = 0.5 * base.value * height.value;
+    areaOfTriangle.innerText = `Area of the triangle is ${area}`;
+  }
 };
 
-calculate?.addEventListener("click", calculateHypotenuse);
+calculate?.addEventListener("click", calculateArea);
